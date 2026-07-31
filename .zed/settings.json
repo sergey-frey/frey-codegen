@@ -1,0 +1,32 @@
+{
+  "languages": {
+    "JavaScript": {
+      "format_on_save": "on",
+      "formatter": { "language_server": { "name": "oxfmt" } },
+      "language_servers": ["oxlint", "oxfmt", "..."]
+    },
+    "JSX": {
+      "format_on_save": "on",
+      "formatter": { "language_server": { "name": "oxfmt" } },
+      "language_servers": ["oxlint", "oxfmt", "..."]
+    },
+    "TypeScript": {
+      "format_on_save": "on",
+      "formatter": { "language_server": { "name": "oxfmt" } },
+      "language_servers": ["oxlint", "oxfmt", "..."]
+    },
+    "TSX": {
+      "format_on_save": "on",
+      "formatter": { "language_server": { "name": "oxfmt" } },
+      "language_servers": ["oxlint", "oxfmt", "..."]
+    },
+    "JSON": {
+      "format_on_save": "on",
+      "formatter": { "language_server": { "name": "oxfmt" } }
+    },
+    "JSONC": {
+      "format_on_save": "on",
+      "formatter": { "language_server": { "name": "oxfmt" } }
+    }
+  }
+}

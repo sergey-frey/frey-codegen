@@ -1,0 +1,8 @@
+{
+  "sliceName": {
+    "label": "Slice name (e.g. user)"
+  },
+  "initialValue": {
+    "label": "Initial state value (JS expression)"
+  }
+}
