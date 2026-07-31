@@ -15,6 +15,17 @@
   ],
   "author": "Sergey Frey <sergey.frey.work@gmail.com>",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sergey-frey/frey-codegen.git"
+  },
+  "bugs": {
+    "url": "https://github.com/sergey-frey/frey-codegen/issues"
+  },
+  "homepage": "https://github.com/sergey-frey/frey-codegen#readme",
+  "engines": {
+    "node": ">=18"
+  },
   "bin": {
     "fcode": "./dist/cli.js"
   },
@@ -34,6 +45,7 @@
   "scripts": {
     "dev": "vite build --watch",
     "build": "tsc && vite build && chmod +x dist/cli.js",
+    "prepublishOnly": "npm run build",
     "start": "node dist/cli.js",
     "link": "npm run build && npm link",
     "lint": "oxlint",
