@@ -1,6 +1,6 @@
 {
   "name": "frey-codegen",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Interactive CLI generator for file and folder templates with placeholder substitution.",
   "keywords": [
     "cli",
