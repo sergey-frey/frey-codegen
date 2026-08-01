@@ -1,3 +1,4 @@
 {
-  "template_naming_style": "pascalcase"
+  "template_naming_style": "kebabcase",
+  "exclude": ["src"]
 }

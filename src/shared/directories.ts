@@ -2,9 +2,17 @@ import type { Dirent } from "node:fs";
 import { readdir, readFile } from "node:fs/promises";
 import { join, sep } from "node:path";
 import ignore, { type Ignore } from "ignore";
+import type { FcodeConfig } from "./config";
 
-export async function loadIgnore(root: string): Promise<Ignore> {
+export async function loadIgnore(root: string, config: FcodeConfig): Promise<Ignore> {
   const ig = ignore().add(".git");
+
+  const excludedFolders = config.exclude ?? [];
+
+  for (const exclude of excludedFolders) {
+    ig.add(exclude);
+  }
+
   try {
     const content = await readFile(join(root, ".gitignore"), "utf8");
     ig.add(content);

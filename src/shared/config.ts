@@ -4,6 +4,7 @@ import { CONFIG_FILE } from "./constants.ts";
 
 export interface FcodeConfig {
   template_naming_style: string;
+  exclude?: string[];
 }
 
 export async function loadConfig(root: string): Promise<FcodeConfig> {

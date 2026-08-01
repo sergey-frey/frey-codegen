@@ -5,9 +5,7 @@ CLI generator for file and folder templates.
 ## Install and run
 
 ```bash
-npm install
-npm run build
-npm start
+npm -D install frey-codegen
 ```
 
 On startup the CLI:
@@ -25,16 +23,22 @@ with an error.
 
 ```json
 {
-  "template_naming_style": "kebabcase"
+  "template_naming_style": "kebabcase",
+  "exclude": ["src", "dist"]
 }
 ```
 
-| Parameter                | Required | Description                                                                                                                       |
+| Parameter               | Required | Description                                                                                                                           |
 | ------------------------ | -------- | ----------------------------------------------------------------------------------------------------------------------------------- |
 | `template_naming_style`  | yes      | Naming style used for the new subfolder's name (the "Create a new folder?" step). One of the styles from the formatters table below. |
+| `exclude`                | no       | List of folders to hide from the destination-folder picker. Uses `.gitignore`-style patterns (matched with the [`ignore`](https://www.npmjs.com/package/ignore) package). |
 
 If the style is unknown, the CLI exits with an error when trying to create the
 folder.
+
+When the CLI walks the project to build the destination-folder list, it always
+skips `.git` and anything matched by the project's root `.gitignore`, in
+addition to the patterns from `exclude`.
 
 ## Templates (`.fcode/templates/`)
 

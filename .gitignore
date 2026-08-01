@@ -24,3 +24,4 @@ dist-ssr
 *.sw?
 
 .fcode
+fcode.config.json

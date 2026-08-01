@@ -24,7 +24,7 @@ export async function runGenerateFromTemplate(root: string): Promise<void> {
   const config = await loadConfig(root);
   await loadFcodeFiles(root);
 
-  const ig = await loadIgnore(root);
+  const ig = await loadIgnore(root, config);
   const dirs = await walkDirs(root, ig);
 
   const path = await promptDestinationPath(dirs);
